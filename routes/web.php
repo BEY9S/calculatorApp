@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/calculator', CalculatorController::class);
+Route::get('/calculator', [CalculatorController::class, 'get']);
+
+Route::post('/calculator', [CalculatorController::class, 'post']);
